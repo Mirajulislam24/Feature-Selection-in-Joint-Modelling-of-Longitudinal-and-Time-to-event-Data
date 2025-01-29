@@ -31,8 +31,6 @@ jagsmodel<- "model{
     fA.T.derivY1[i] <- inprod(betas1[1:3], XAtime.derivY1[i, 
                                                           1:ncXA.derivY1]) + inprod(b[i, 1:3], ZAtime.derivY1[i, 
                                                                                                               1:ncZA.derivY1])
-    
-    
     f.I1[i]<-step(f.T1[i]-threshold[1])
     
     f.T2[i] <- inprod(betas2[1:ncX2], Xtime2[i, 1:ncX2]) + 
@@ -43,7 +41,6 @@ jagsmodel<- "model{
     fA.T.derivY2[i] <- inprod(betas2[1:3], XAtime.derivY2[i, 
                                                           1:ncXA.derivY2]) + inprod(b[i, (ncZ1 + 1):(ncZ1 + ncZ2)], 
                                                                                     ZAtime.derivY2[i, 1:ncZA.derivY2])
-    
     f.I2[i]<-step(f.T2[i]-threshold[2])
     
     f.T3[i] <- inprod(betas3[1:ncX3], Xtime3[i, 1:ncX3]) + 
@@ -55,8 +52,6 @@ jagsmodel<- "model{
     fA.T.derivY3[i] <- inprod(betas3[1:3], XAtime.derivY3[i, 
                                                           1:ncXA.derivY3]) + inprod(b[i, (ncZ1+ncZ2 + 1):(ncZ1 + ncZ2+ncZ3)], 
                                                                                     ZAtime.derivY3[i, 1:ncZA.derivY3])
-    
-    
     f.I3[i]<-step(f.T3[i]-threshold[3])
     
     log.hazardD[i] <- log.h0.TD[i] + etaBaselineD[i] + alphasD1 * 
