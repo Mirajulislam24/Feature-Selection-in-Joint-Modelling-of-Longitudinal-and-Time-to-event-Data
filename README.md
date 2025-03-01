@@ -2,8 +2,10 @@ This repository includes the code for a Bayesian feature selection approach that
 
 Specifically:
 
-"DataPrep": includes the preparation of the data (like ARIC)
+"DataPrep": includes the preparation of the data (like ARIC).
+
 "ModelJags": includes the joint model for jags and its implementation in R.
+
 "SimData_1R2F: includes data simulation for the case where one risk factor with two features is important for the hazard.
 
 How does it work:
